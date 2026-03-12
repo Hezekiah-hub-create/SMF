@@ -39,7 +39,7 @@ app.get('/api/health', (req, res) => {
 });
 
 // For any other request, send back index.html from the admin dist
-app.get('*', (req, res) => {
+app.use((req, res) => {
   res.sendFile(path.join(__dirname, '../client-admin/dist', 'index.html'));
 });
 

@@ -22,6 +22,9 @@ app.use(express.json());
 // Serve uploaded profile pictures
 app.use('/uploads', express.static(path.join(__dirname, 'uploads')));
 
+// Serve Admin Dashboard (React/Vite) static files
+app.use(express.static(path.join(__dirname, '../client-admin/dist')));
+
 // Routes
 app.use('/api/auth', require('./routes/authRoutes'));
 app.use('/api/users', require('./routes/userRoutes'));
@@ -33,6 +36,11 @@ app.use('/api/chatbot', require('./routes/chatbotRoutes'));
 // Health check route
 app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Server is running' });
+});
+
+// For any other request, send back index.html from the admin dist
+app.get('*', (req, res) => {
+  res.sendFile(path.join(__dirname, '../client-admin/dist', 'index.html'));
 });
 
 // Error handling middleware

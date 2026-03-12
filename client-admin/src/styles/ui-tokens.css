@@ -1,0 +1,45 @@
+:root{
+  --sf-bg: #071133;
+  --sf-surface: #081736;
+  --sf-accent: #2ea3ff;
+  --sf-accent-2: #7cc0ff;
+  --sf-text: #eef2ff;
+  --sf-muted: #b9c6dd;
+  --sf-border: rgba(255,255,255,0.06);
+  --sf-shadow: 0 6px 18px rgba(2,6,23,0.6);
+  --sf-duration: 200ms;
+  --sf-ease: cubic-bezier(.16,.84,.32,1);
+  --sidebar-width: 240px;
+  --sidebar-collapsed: 72px;
+}
+
+/* Small helpers for collapsed tooltips */
+.sidebar-tooltip{
+  background: rgba(9,12,28,0.95);
+  color: var(--sf-text);
+  padding: 6px 8px;
+  border-radius: 6px;
+  font-size: 13px;
+  box-shadow: var(--sf-shadow);
+}
+
+/* Accent bar for active items */
+.sidebar-active-bar{
+  width:4px;
+  background: linear-gradient(180deg,var(--sf-accent),var(--sf-accent-2));
+  border-radius:0 6px 6px 0;
+}
+
+/* Topbar token */
+.topbar{
+  background: #ffffff;
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+  height:64px;
+}
+
+/* Responsive behavior */
+@media (max-width: 1024px){
+  :root{
+    --sidebar-width: 72px;
+  }
+}

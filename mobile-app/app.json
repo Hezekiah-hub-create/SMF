@@ -1,0 +1,76 @@
+{
+  "expo": {
+    "name": "Student Feedback Management System",
+    "slug": "student-feedback-management",
+    "version": "1.0.0",
+    "orientation": "default",
+    "icon": "./assets/images/logo.jpg",
+    "scheme": "mobileapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "splash": {
+      "image": "./assets/images/splash-icon.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#4169E1"
+    },
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.studentfeedback.managementsystem",
+      "infoPlist": {
+        "NSFaceIDUsageDescription": "Use Face ID for secure authentication"
+      },
+      "platforms": [
+        "iphoneos",
+        "iphonesimulator"
+      ]
+    },
+    "android": {
+      "adaptiveIcon": {
+        "backgroundColor": "#4169E1",
+        "foregroundImage": "./assets/images/android-icon-foreground.png",
+        "backgroundImage": "./assets/images/android-icon-background.png",
+        "monochromeImage": "./assets/images/android-icon-monochrome.png"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.studentfeedback.managementsystem",
+      "versionCode": 1,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE"
+      ]
+    },
+    "web": {
+      "output": "static",
+      "favicon": "./assets/images/favicon.png",
+      "bundler": "metro"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#4169E1",
+          "dark": {
+            "backgroundColor": "#4169E1"
+          }
+        }
+      ],
+      "@react-native-voice/voice"
+    ],
+    "experiments": {
+      "typedRoutes": true,
+      "reactCompiler": true
+    },
+    "extra": {
+      "router": {
+        "origin": false
+      },
+      "eas": {
+        "projectId": "student-feedback-system"
+      }
+    }
+  }
+}

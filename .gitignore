@@ -1,0 +1,14 @@
+node_modules/
+.expo/
+dist/
+build/
+.env
+*.log
+.DS_Store
+C:\Users\LENOVO Z16 G1\Desktop\SMF\mobile-app\.expo/
+C:\Users\LENOVO Z16 G1\Desktop\SMF\server\node_modules/
+C:\Users\LENOVO Z16 G1\Desktop\SMF\client-admin\node_modules/
+/node_modules
+/client-admin/node_modules
+/mobile-app/node_modules
+/server/node_modules
